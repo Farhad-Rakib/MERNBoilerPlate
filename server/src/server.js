@@ -17,12 +17,11 @@ var connection_url='';
 
 if(process.env.ENVIRONMENT == 'development')
 {
-
-    connection_url = `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;
+    connection_url = `mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`
 }
 else if (process.env.ENVIRONMENT == 'staging')
 {
-    connection_url= `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;
+    connection_url = `mongodb://${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`;
 }
 else if (process.env.ENVIRONMENT == 'production')
 {
